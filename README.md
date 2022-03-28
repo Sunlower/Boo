@@ -2,9 +2,6 @@
 
 O Boo surgiu como uma forma de aumotizar a organização financeira, o usuário adiciona seus gastos e rendas e vai ser criado uma planilha com seu balanço geral.
 
-//Interface
-/*
-
                   -------------------
                  |Bem vindo(a) ao Boo|
                   -------------------
@@ -18,10 +15,7 @@ O Boo surgiu como uma forma de aumotizar a organização financeira, o usuário 
  
  
  Digite o item que deseja acessar
- */
  
-//  1. Despesas Imediatas
-/*
  
                   ------------------
                  |Despesas Imediatas|
@@ -39,8 +33,6 @@ O Boo surgiu como uma forma de aumotizar a organização financeira, o usuário 
  Deseja adicionar outro gasto? [Y/N]
  */
 
-//   2. Plano de Receita Mensal
-/*
 
                ------------------------
               |Plano de Receitas Mensal|
@@ -62,10 +54,7 @@ O Boo surgiu como uma forma de aumotizar a organização financeira, o usuário 
  
  
  Digite o item que deseja acessar
- */
  
- // 2.1 Renda Fixa
-/*
  
                    ----------
                   |Renda Fixa|
@@ -119,11 +108,11 @@ O Boo surgiu como uma forma de aumotizar a organização financeira, o usuário 
  
  
  Digite o item que deseja acessar
- */
  
- // 3.1 Despesas Fixas
-// Aqui a pessoa vai preencher as informcoes de despesas fixas, como aluguel, luz, agua, internet e afins
-/*
+ 
+
+Aqui a pessoa vai preencher as informcoes de despesas fixas, como aluguel, luz, agua, internet e afins
+
                     --------------
                    |Despesas Fixas|
                     --------------
@@ -136,12 +125,10 @@ O Boo surgiu como uma forma de aumotizar a organização financeira, o usuário 
      
      Deseja adicionar outro gasto? [Y/N]
  
- */
- 
- // 3.2 Outras Despesas
-// Aqui a pessoa irá adicionar as despesas que sao variaveis mas sabe que ira fazer no mes, como, alimentacao, transporte, material de limpeza, roupas essenciais, medicamentos, entretenimento e afins
 
-/*
+ 
+Aqui a pessoa irá adicionar as despesas que sao variaveis mas sabe que ira fazer no mes, como, alimentacao, transporte, material de limpeza, roupas essenciais, medicamentos, entretenimento e afins
+
                      ---------------
                     |Outras Despesas|
                      ---------------
@@ -163,12 +150,9 @@ O Boo surgiu como uma forma de aumotizar a organização financeira, o usuário 
  
  Deseja adicionar outra despesa? [Y/N]
  
- */
  
- // 3.3 Poupança
-//Aqui a pessoa vai especificar quanto está guardando no mes para alcancar uma meta
+Aqui a pessoa vai especificar quanto está guardando no mes para alcancar uma meta
 
-/*
                   --------
                  |Poupança|
                   --------
@@ -179,4 +163,4 @@ O Boo surgiu como uma forma de aumotizar a organização financeira, o usuário 
  
  
  Deseja adicionar outra meta? [Y/N]
- */
+ 
