@@ -14,5 +14,9 @@ let formattedDate = format.string(from: date)
 
 createFile()
 
+print("\n\n\tQual seu balanço geral do mês passado?\n", terminator: "\n\t")
+media = Double(readLine()!)!
+media = round(media * 100) / 100.0
+
 inicio()
 

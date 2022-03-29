@@ -38,6 +38,8 @@ func poupanca(){
             poupanca()
         }
         media -= Double(valor!)
+    media = round(media * 100) / 100.0
+
         UserDefaults.standard.set(media, forKey: "media")
         UserDefaults.standard.synchronize()
             

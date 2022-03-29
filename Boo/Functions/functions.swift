@@ -37,8 +37,7 @@ func inicio(){
     print("\t3. Plano de Despesas Mensal\n")
     print("\t4. Sair\n\n")
     
-    print("\tQual seu balanço geral do mês passado?\n")
-    media = Double(readLine()!)!
+    
     repeat{
         print("\n\tDigite o item que deseja acessar\n", terminator:"\n\t")
         
