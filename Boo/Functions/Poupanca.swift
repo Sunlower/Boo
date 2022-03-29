@@ -6,3 +6,51 @@
 //
 
 import Foundation
+//Poupança
+//Aqui a pessoa vai especificar quanto está guardando no mes para alcancar uma meta
+
+/*
+                  --------
+                 |Poupança|
+                  --------
+ 
+ Meta:
+ 
+ Valor:
+ 
+ 
+ Deseja adicionar outra meta? [Y/N]
+ */
+
+//FUNCAO DE ESCOLHA
+func poupanca(_ media: Double){
+    var media1 = media
+    print("\t\t\tPoupança\n\n\n")
+    let tipo: String = "Despesa"
+    let tag: String = "Economia"
+    print("\tMeta:", terminator:" ") //Viagem longa, casa, carro
+    let gasto = readLine()!
+    print("\n\tValor:", terminator:" ") //Valor
+    let valor = Double(readLine()!)
+    
+    //esse if vai verificar se valor recebeu alguma letra ou valor nulo
+            if gasto == "" {
+            print("\n\tNenhum campo pode ficar em branco, preencha novamente")
+            poupanca(media)
+        }
+        media1 -= Double(valor!)
+        UserDefaults.standard.set(media, forKey: "media")
+        UserDefaults.standard.synchronize()
+            
+        let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), -\(valor!), \(formattedDate),,\(media1)")
+        writeFile(lista: lista)
+        
+    print("\n\n\tDeseja adicionar outra meta? [Y/N]\n", terminator:"\n\t")
+    let t = readLine()?.lowercased()
+    
+    if t == "y"{
+        poupanca(media)
+    } else {
+        inicio(media)
+    }
+}

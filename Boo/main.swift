@@ -1,4 +1,3 @@
-//
 //  main.swift
 //  Boo
 //
@@ -7,5 +6,13 @@
 
 import Foundation
 
-print("Hello, World!")
+var media: Double = 0
+let date = Date()
+let format = DateFormatter()
+format.dateFormat = "dd/MM/yyyy"
+let formattedDate = format.string(from: date)
+
+createFile()
+
+inicio(media)
 

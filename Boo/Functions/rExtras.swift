@@ -6,3 +6,47 @@
 //
 
 import Foundation
+
+//Renda Extra
+/*
+ Renda Extra
+ 
+ Renda:
+ 
+ Valor:
+ 
+ 
+ Deseja adicionar outra renda? [Y/N]
+ */
+func rExtra(_ media: Double){
+    var media1 = media
+    print("\t\t\t Renda Extra\n\n\n")
+    let tipo: String = "Renda"
+    let tag: String = "Extra"
+    print("\tRenda:", terminator:" ")//venda de algum objeto, imóvel, veículo e afins; recebimento de pagamento de algum emprestimo.
+    let renda = readLine()!
+    print("\n\tValor:", terminator:" ")//valor
+    let valor = Double(readLine()!)
+    
+    //esse if vai verificar se valor recebeu alguma letra ou valor nulo
+    
+        if renda == "" {
+            print("\n\tNenhum campo pode ficar em branco, preencha novamente")
+            rExtra(media)
+        }
+        media1 += Double(valor!)
+        UserDefaults.standard.set(media, forKey: "media")
+        UserDefaults.standard.synchronize()
+        
+        let lista: String = ("\(renda.capitalized), \(tipo), \(tag), \( valor!), \(formattedDate),,\(media1)")
+        writeFile(lista: lista)
+    
+    print("\n\n\tDeseja adicionar outra renda? [Y/N]", terminator:"\n\t")
+    let t = readLine()?.lowercased()
+    
+    if t == "y"{
+        rExtra(media)
+    } else {
+        inicio(media)
+    }
+}
