@@ -2,43 +2,68 @@
 
 O Boo surgiu como uma forma de aumotizar a organização financeira, o usuário adiciona seus gastos e rendas e vai ser criado uma planilha com seu balanço geral.
 
-                      -------------------
-                     |Bem vindo(a) ao Boo|
-                      -------------------
+# Boo - Automatizador de Gastos
 
-     1. Despesas Imediatas
+Boo tem a proposta de:
+- Ajudar no balanço financeira mensal
+- Agilizar o processo de preenchimento de planilhas
+- Categorizar suas despesas e rendas
 
-     2. Plano de Receita Mensal
+## Como utilizar
 
-     3. Plano de Despesas Mensal
+- O usuário primeiramente informará qual foi seu balanço geral do último mês ou da sua última visita ao aplicativo.
+    - Esse balanço é o saldo total do mês anterior, podendo ser representados de forma negativa ou positiva
+    - Os números decimais só podem ser representados com "."
 
+- Após isso o usuário será redirecionado para as opções de adicionar rendas ou despesas
+    - O usuário só deve colocar valores positivos independente da opção
+    - Os números decimais só podem ser representados com "."
 
-     Digite o item que deseja acessar
-
-
-Aqui o usuário irá adicionar despesas emergenciais ou que não podem ser contabilizados no início do mês 
-
-                      ------------------
-                     |Despesas Imediatas|
-                      ------------------
-
-
-     Estas despesas estão fora do seu planejamento de despesas mensal
-
-     Gasto:
-
-     Tipo de Gasto:
-
-     Valor:
-
-     Deseja adicionar outro gasto? [Y/N]
+- Será criada uma planilha do tipo CSV na Home do usuário
 
 
-Este é o espaço para organizar suas rendas mensais e fazer seu balanceamento mensal
 
-                   ------------------------
-                  |Plano de Receitas Mensal|
-                   ------------------------
+## Visão Geral
+
+- Interface Inicial
+
+                      
+                                Bem vindo(a) ao Boo
+                      
+
+        1. Despesas Imediatas
+
+        2. Plano de Receita Mensal
+
+        3. Plano de Despesas Mensal
+
+
+        Digite o item que deseja acessar
+
+
+- Aqui o usuário irá adicionar despesas emergenciais ou que não podem ser contabilizados no início do mês 
+
+                      
+                            Despesas Imediatas
+                      
+
+
+        Estas despesas estão fora do seu planejamento de despesas mensal
+
+        Gasto:
+
+        Tipo de Gasto:
+
+        Valor:
+
+        Deseja adicionar outro gasto? [Y/N]
+
+
+- Este é o espaço para organizar suas rendas mensais e fazer seu balanceamento mensal
+
+                   
+                            Plano de Receitas Mensal
+                    
 
 
 
@@ -57,9 +82,9 @@ Este é o espaço para organizar suas rendas mensais e fazer seu balanceamento m
 
       Digite o item que deseja acessar
 
-                         ----------
-                        |Renda Fixa|
-                         ----------
+                         
+                        Renda Fixa
+                         
 
       Renda:
 
@@ -69,9 +94,9 @@ Este é o espaço para organizar suas rendas mensais e fazer seu balanceamento m
       Deseja adicionar outra renda? [Y/N]
 
 
-                         -----------
-                        |Renda Extra|
-                         -----------
+                         
+                        Renda Extra
+                         
 
       Renda:
 
@@ -81,12 +106,11 @@ Este é o espaço para organizar suas rendas mensais e fazer seu balanceamento m
       Deseja adicionar outra renda? [Y/N]
 
 
-Este é o espaço para organizar suas despesas mensais e fazer seu balanceamento mensal
+- Este é o espaço para organizar suas despesas mensais e fazer seu balanceamento mensal
 
-                   ------------------------
-                  |Plano de Despesas Mensal|
-                   ------------------------
-
+                   
+                    Plano de Despesas Mensal
+                   
 
 
        Despesas fixas são despesas que terá durante um grande período de tempo como água, luz, entre outros...
@@ -104,11 +128,11 @@ Este é o espaço para organizar suas despesas mensais e fazer seu balanceamento
 
 
 
-Aqui o usuário irá preencher as informações de despesas fixas, como aluguel, luz, água, internet e afins
+- Aqui o usuário irá preencher as informações de despesas fixas, como aluguel, luz, água, internet e afins
 
-                        --------------
-                       |Despesas Fixas|
-                        --------------
+                        
+                       Despesas Fixas
+                        
 
        Gasto:
 
@@ -120,11 +144,11 @@ Aqui o usuário irá preencher as informações de despesas fixas, como aluguel,
 
 
 
-Aqui o usuário irá adicionar as despesas que são variáveis mas sabe que terá no mês como, alimentação, transporte, material de limpeza, entretenimento e afins
+- Aqui o usuário irá adicionar as despesas que são variáveis mas sabe que terá no mês como, alimentação, transporte, material de limpeza, entretenimento e afins
 
-                         ---------------
-                        |Outras Despesas|
-                         ---------------
+                         
+                        Outras Despesas
+                         
 
        Tipos de tag
 
@@ -144,11 +168,11 @@ Aqui o usuário irá adicionar as despesas que são variáveis mas sabe que ter�
        Deseja adicionar outra despesa? [Y/N]
 
 
-Aqui o usuário irá especificar quanto está guardando no mês para alcancar uma meta
+- Aqui o usuário irá especificar quanto está guardando no mês para alcancar uma meta
 
-                      --------
-                     |Poupança|
-                      --------
+                      
+                     Poupança
+                      
 
        Meta:
 
@@ -156,4 +180,6 @@ Aqui o usuário irá especificar quanto está guardando no mês para alcancar um
 
 
        Deseja adicionar outra meta? [Y/N]
+
+
 
