@@ -1,6 +1,3 @@
-# Boo
-
-O Boo surgiu como uma forma de aumotizar a organização financeira, o usuário adiciona seus gastos e rendas e vai ser criado uma planilha com seu balanço geral.
 
 # Boo - Automatizador de Gastos
 
