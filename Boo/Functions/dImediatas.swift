@@ -28,7 +28,6 @@ import Foundation
 func imediatas (_ media: Double){
     var media1 = media
     print("\t\t\t|Despesa Imediata\n\n\n")
-    
     print("\tEstas despesas estão fora do seu planejamento mensal de gastos\n")
     
     let tipo: String = "Despesa" //classificacao do gasto
@@ -41,7 +40,7 @@ func imediatas (_ media: Double){
     
     //esse if vai verificar se valor recebeu alguma letra ou valor nulo
     if gasto == "" {
-        print("\n\tNenhum campo pode ficar em branco, preencha novamente")
+        print("\n\tNenhum campo pode ficar em branco, preencha novamente:")
         imediatas(media)
     }
         
