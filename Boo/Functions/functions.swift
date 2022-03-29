@@ -29,24 +29,27 @@ var item: String = ""
  */
 
 //FUNCAO INTERMEDIARIA
-func inicio(_ media: Double){
+func inicio(){
     print("\n\n\t\t\tBem vindo(a) ao Boo\n\n\n")
     
     print("\t1. Despesas Imediatas\n")
     print("\t2. Plano de Receita Mensal\n")
     print("\t3. Plano de Despesas Mensal\n")
-    print("\t4. Sair\n")
+    print("\t4. Sair\n\n")
+    
+    print("\tQual seu balanço geral do mês passado?\n")
+    media = Double(readLine()!)!
     repeat{
         print("\n\tDigite o item que deseja acessar\n", terminator:"\n\t")
         
         var item = readLine()!
         switch item{
         case "1":
-            imediatas(media)
+            imediatas()
         case "2":
-            receitas(media)
+            receitas()
         case "3":
-            despesas(media)
+            despesas()
         case "4":
             exit(0)
         default:
@@ -82,7 +85,7 @@ func inicio(_ media: Double){
  */
 
 //FUNCAO INTERMEDIARIA
-func receitas (_ media: Double){
+func receitas (){
     repeat{
         print("\t\t\tPlano de Receitas Mensal\n\n\n")
         print("\tAqui você vai registar seu ganho mensal\n\n")
@@ -98,11 +101,11 @@ func receitas (_ media: Double){
         var item = readLine()!
         switch item{
         case "1":
-            rFixa(media)
+            rFixa()
         case "2":
-            rExtra(media)
+            rExtra()
         case "3":
-            inicio(media)
+            inicio()
         default:
             item = ""
             print("\n\tItem inválido, pressione qualquer tecla para escolher novamente.\n")
@@ -136,7 +139,7 @@ func receitas (_ media: Double){
  */
 
 //FUNCAO INTERMEDIARIA
-func despesas (_ media: Double){
+func despesas (){
     repeat{
         print("\t\t\tPlano de Despesas Mensal\n\n\n")
         print("\tEstes é o espaço para organizar suas despesas mensais e fazer o balanceamento de renda\n\n")
@@ -151,13 +154,13 @@ func despesas (_ media: Double){
         
         switch item {
         case "1":
-            dFixa(media)
+            dFixa()
         case "2":
-            dOutras(media)
+            dOutras()
         case "3":
-            poupanca(media)
+            poupanca()
         case "4":
-            inicio(media)
+            inicio()
         default:
             item = ""
             print("\n\tItem inválido, pressione qualquer tecla para escolher novamente.\n")

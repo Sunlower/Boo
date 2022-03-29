@@ -18,8 +18,7 @@ import Foundation
  
  Deseja adicionar outra renda? [Y/N]
  */
-func rExtra(_ media: Double){
-    var media1 = media
+func rExtra(){
     print("\t\t\t Renda Extra\n\n\n")
     let tipo: String = "Renda"
     let tag: String = "Extra"
@@ -32,21 +31,21 @@ func rExtra(_ media: Double){
     
         if renda == "" {
             print("\n\tNenhum campo pode ficar em branco, preencha novamente")
-            rExtra(media)
+            rExtra()
         }
-        media1 += Double(valor!)
+        media += Double(valor!)
         UserDefaults.standard.set(media, forKey: "media")
         UserDefaults.standard.synchronize()
         
-        let lista: String = ("\(renda.capitalized), \(tipo), \(tag), \( valor!), \(formattedDate),,\(media1)")
+        let lista: String = ("\(renda.capitalized), \(tipo), \(tag), \( valor!), \(formattedDate),,\(media)")
         writeFile(lista: lista)
     
     print("\n\n\tDeseja adicionar outra renda? [Y/N]", terminator:"\n\t")
     let t = readLine()?.lowercased()
     
     if t == "y"{
-        rExtra(media)
+        rExtra()
     } else {
-        inicio(media)
+        inicio()
     }
 }

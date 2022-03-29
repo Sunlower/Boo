@@ -28,8 +28,7 @@ import Foundation
  */
 
 
-func dFixa(_ media: Double){
-    var media1 = media
+func dFixa(){
     print("\t\t\t Despesas Fixas\n\n\n")
     
     let tipo: String = "Despesa"
@@ -45,14 +44,14 @@ func dFixa(_ media: Double){
     //esse if vai verificar se valor recebeu alguma letra ou valor nulo
     if gasto == "" {
             print("\n\tNenhum campo pode ficar em branco, preencha novamente")
-            dFixa(media)
+            dFixa()
         }
             
-        media1 -= Double(valor!)
+        media -= Double(valor!)
         UserDefaults.standard.set(media, forKey: "media")
         UserDefaults.standard.synchronize()
             
-        let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), -\(valor!), \(vence),,\(media1)")
+        let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), -\(valor!), \(vence),,\(media)")
         writeFile(lista: lista)
     
     
@@ -60,9 +59,9 @@ func dFixa(_ media: Double){
     let t = readLine()?.lowercased()
 
     if t == "y"{
-        dFixa(media)
+        dFixa()
     } else {
-        inicio(media)
+        inicio()
     }
 
 }

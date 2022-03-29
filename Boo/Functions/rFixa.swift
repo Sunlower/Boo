@@ -22,8 +22,7 @@ import Foundation
  */
 
 //FUNCAO DE ESCOLHA
-func rFixa(_ media: Double){
-    var media1 = media
+func rFixa(){
     print("\t\t\tRenda Fixa\n\n\n")
     let tipo: String = "Renda"
     let tag: String = "Fixa"
@@ -36,13 +35,13 @@ func rFixa(_ media: Double){
     //esse if vai verificar se valor recebeu alguma letra ou valor nulo
         if renda == "" {
             print("\n\tNenhum campo pode ficar em branco, preencha novamente")
-            rFixa(media)
+            rFixa()
         }
-        media1 += Double(valor!)
+        media += Double(valor!)
         UserDefaults.standard.set(media, forKey: "media")
         UserDefaults.standard.synchronize()
         
-        let lista: String = ("\(renda.capitalized), \(tipo.capitalized), \(tag.capitalized), \(valor!), \(formattedDate),,\(media1)")
+        let lista: String = ("\(renda.capitalized), \(tipo.capitalized), \(tag.capitalized), \(valor!), \(formattedDate),,\(media)")
         writeFile(lista: lista)
     
     
@@ -51,8 +50,8 @@ func rFixa(_ media: Double){
     let t = readLine()?.lowercased()
     
     if t == "y"{
-        rFixa(media)
+        rFixa()
     } else {
-        inicio(media)
+        inicio()
     }
 }

@@ -14,5 +14,5 @@ let formattedDate = format.string(from: date)
 
 createFile()
 
-inicio(media)
+inicio()
 

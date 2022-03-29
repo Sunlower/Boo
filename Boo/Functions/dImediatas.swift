@@ -25,8 +25,7 @@ import Foundation
  */
 
 //FUNCAO DE ESCOLHA
-func imediatas (_ media: Double){
-    var media1 = media
+func imediatas (){
     print("\t\t\t|Despesa Imediata\n\n\n")
     print("\tEstas despesas estão fora do seu planejamento mensal de gastos\n")
     
@@ -41,14 +40,14 @@ func imediatas (_ media: Double){
     //esse if vai verificar se valor recebeu alguma letra ou valor nulo
     if gasto == "" {
         print("\n\tNenhum campo pode ficar em branco, preencha novamente:")
-        imediatas(media)
+        imediatas()
     }
         
-        media1 -= Double(valor!) 
+        media -= Double(valor!)
         UserDefaults.standard.set(media, forKey: "media")
         UserDefaults.standard.synchronize()
         
-    let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), \(valor!), \(formattedDate),,\(media1)")
+    let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), \(valor!), \(formattedDate),,\(media)")
         writeFile(lista: lista)
     
     
@@ -56,8 +55,8 @@ func imediatas (_ media: Double){
     let t = readLine()?.lowercased()
     
     if t == "y"{
-        imediatas(media)
+        imediatas()
     } else {
-        inicio(media)
+        inicio()
     }
 }

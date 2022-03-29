@@ -23,8 +23,7 @@ import Foundation
  */
 
 //FUNCAO DE ESCOLHA
-func poupanca(_ media: Double){
-    var media1 = media
+func poupanca(){
     print("\t\t\tPoupança\n\n\n")
     let tipo: String = "Despesa"
     let tag: String = "Economia"
@@ -36,21 +35,21 @@ func poupanca(_ media: Double){
     //esse if vai verificar se valor recebeu alguma letra ou valor nulo
             if gasto == "" {
             print("\n\tNenhum campo pode ficar em branco, preencha novamente")
-            poupanca(media)
+            poupanca()
         }
-        media1 -= Double(valor!)
+        media -= Double(valor!)
         UserDefaults.standard.set(media, forKey: "media")
         UserDefaults.standard.synchronize()
             
-        let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), -\(valor!), \(formattedDate),,\(media1)")
+        let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), -\(valor!), \(formattedDate),,\(media)")
         writeFile(lista: lista)
         
     print("\n\n\tDeseja adicionar outra meta? [Y/N]\n", terminator:"\n\t")
     let t = readLine()?.lowercased()
     
     if t == "y"{
-        poupanca(media)
+        poupanca()
     } else {
-        inicio(media)
+        inicio()
     }
 }

@@ -33,8 +33,8 @@ import Foundation
  Deseja adicionar outra despesa? [Y/N]
  
  */
-func dOutras(_ media: Double){ //dOutras(VarAlguma)
-    var media1 = media
+func dOutras(){ //dOutras(VarAlguma)
+    
     print("\t\t\tOutras Despesas\n\n\n")
     
     
@@ -54,14 +54,14 @@ func dOutras(_ media: Double){ //dOutras(VarAlguma)
     //esse if vai verificar se valor recebeu alguma letra ou valor nulo
     if gasto == "" {
             print("\n\tNenhum campo pode ficar em branco, preencha novamente")
-            dOutras(media)
+            dOutras()
         }
         
-        media1 = Double(valor!)
+        media = Double(valor!)
         UserDefaults.standard.set(media, forKey: "media")
         UserDefaults.standard.synchronize()
             
-        let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), -\(valor!), \(formattedDate),,\(media1)")
+        let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), -\(valor!), \(formattedDate),,\(media)")
         writeFile(lista: lista)
 
     
@@ -69,7 +69,7 @@ func dOutras(_ media: Double){ //dOutras(VarAlguma)
     let t = readLine()?.lowercased()
     
     if t == "y"{
-        dOutras(media)
+        dOutras()
     } else {
-        inicio(media)
+        inicio()
     }}
