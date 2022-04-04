@@ -29,7 +29,6 @@ func imediatas (){
     print("\t\t\tDespesa Imediata\n\n\n")
     print("\tEstas despesas estão fora do seu planejamento mensal de gastos\n")
     
-    let tipo: String = "Despesa" //classificacao do gasto
     let tag: String = "Imediata" //classificao do tipo de gasto
     
     print("\tGasto:", terminator:" ") //o que voce comprou
@@ -37,28 +36,12 @@ func imediatas (){
     print("\n\tValor:", terminator:" ")//valor da compra
     let valor = Double(readLine()!)
     
+        
     //esse if vai verificar se valor recebeu alguma letra ou valor nulo
-    if gasto == "" {
-        print("\n\tNenhum campo pode ficar em branco, preencha novamente:")
-        imediatas()
-    }
-        
-        media -= Double(valor!)
-    media = round(media * 100) / 100.0
-
-        UserDefaults.standard.set(media, forKey: "media")
-        UserDefaults.standard.synchronize()
-        
-    let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), \(valor!), \(formattedDate),,\(media)")
-        writeFile(lista: lista)
-    
-    
-    print("\n\n\tDeseja adicionar outro gasto? [Y/N]\n", terminator:"\n\t")
-    let t = readLine()?.lowercased()
-    
-    if t == "y"{
-        imediatas()
+    if gasto.isEmpty{
+            print("\n\tNenhum campo pode ficar em branco, preencha novamente")
+            imediatas()
     } else {
-        inicio()
+        generic_d(valor: valor, gasto: gasto, tag: tag, data: formattedDate)
     }
 }

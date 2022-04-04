@@ -24,36 +24,18 @@ import Foundation
 //FUNCAO DE ESCOLHA
 func rFixa(){
     print("\t\t\tRenda Fixa\n\n\n")
-    let tipo: String = "Renda"
     let tag: String = "Fixa"
-    
     print("\tRenda:", terminator:" ") //salário, bolsa, aluguel e afins
     let renda = readLine()!
     print("\n\tValor:", terminator:" ") //valor da renda
     let valor = Double(readLine()!)
     
     //esse if vai verificar se valor recebeu alguma letra ou valor nulo
-        if renda == "" {
+    if renda.isEmpty {
             print("\n\tNenhum campo pode ficar em branco, preencha novamente")
             rFixa()
-        }
-        media += Double(valor!)
-        media = round(media * 100) / 100.0
-
-        UserDefaults.standard.set(media, forKey: "media")
-        UserDefaults.standard.synchronize()
-        
-        let lista: String = ("\(renda.capitalized), \(tipo.capitalized), \(tag.capitalized), \(valor!), \(formattedDate),,\(media)")
-        writeFile(lista: lista)
-    
-    
-    
-    print("\n\n\tDeseja adicionar outra renda? [Y/N]", terminator:"\n\t")
-    let t = readLine()?.lowercased()
-    
-    if t == "y"{
-        rFixa()
     } else {
-        inicio()
+        generic_r(valor: valor, gasto: renda, tag: tag, data: formattedDate)
     }
+    
 }

@@ -34,17 +34,15 @@ import Foundation
  
  */
 func dOutras(){ //dOutras(VarAlguma)
-    
-    print("\t\t\tOutras Despesas\n\n\n")
-    
-    
-    print("\tTipos de tag \n")
-    print("\tDespesas da Vida: Supermercado, materiais de limpeza, roupas essenciais, medicamentos, transportes...")
-    print("\tCultura e Educação: Cursos e treinamento, ingressos para eventos culturais, livros...")
-    print("\tEntretenimento: Cinema, saída com os amigos, viagens curtas, cosméticos...")
-    print("\tOutros: Despesas que não são incluídos nas outras categorias\n\n")
-    
-    let tipo: String = "Despesa"
+    print("""
+    \t\t\tOutras Despesas\n\n\n
+    \tTipos de tag\n
+    \tDespesas da Vida: Supermercado, materiais de limpeza, roupas essenciais, medicamentos, transportes...\n
+    \tCultura e Educação: Cursos e treinamento, ingressos para eventos culturais, livros...\n
+    \tEntretenimento: Cinema, saída com os amigos, viagens curtas, cosméticos...\n
+    \tOutros: Despesas que não são incluídos nas outras categorias\n\n
+    """)
+   
     print("\tDespesa:", terminator:" ")
     let gasto = readLine()!
     print("\n\tTag:", terminator:" ")
@@ -52,25 +50,10 @@ func dOutras(){ //dOutras(VarAlguma)
     print("\n\tValor:", terminator:" ")
     let valor = Double(readLine()!)
     //esse if vai verificar se valor recebeu alguma letra ou valor nulo
-    if gasto == "" {
+    if gasto.isEmpty{
             print("\n\tNenhum campo pode ficar em branco, preencha novamente")
             dOutras()
-        }
-        
-        media -= Double(valor!)
-        media = round(media * 100) / 100.0
-        UserDefaults.standard.set(media, forKey: "media")
-        UserDefaults.standard.synchronize()
-            
-        let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), -\(valor!), \(formattedDate),,\(media)")
-        writeFile(lista: lista)
-
-    
-    print("\n\n\tDeseja adicionar outra despesa? [Y/N]\n", terminator:"\n\t")
-    let t = readLine()?.lowercased()
-    
-    if t == "y"{
-        dOutras()
     } else {
-        inicio()
-    }}
+        generic_d(valor: valor, gasto: gasto, tag: tag, data: formattedDate)
+    }
+}

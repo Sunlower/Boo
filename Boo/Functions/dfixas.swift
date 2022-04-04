@@ -31,7 +31,6 @@ import Foundation
 func dFixa(){
     print("\t\t\t Despesas Fixas\n\n\n")
     
-    let tipo: String = "Despesa"
     let tag: String = "Fixa"
     
     print("\tDespesa:", terminator:" ")
@@ -41,29 +40,10 @@ func dFixa(){
     print("\n\tVencimento (dd/mm/yyyy):", terminator:" ")
     let vence = readLine()!
     
-    //esse if vai verificar se valor recebeu alguma letra ou valor nulo
-    if gasto == "" {
+    if gasto.isEmpty{
             print("\n\tNenhum campo pode ficar em branco, preencha novamente")
             dFixa()
-        }
-            
-        media -= Double(valor!)
-    media = round(media * 100) / 100.0
-
-        UserDefaults.standard.set(media, forKey: "media")
-        UserDefaults.standard.synchronize()
-            
-        let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), -\(valor!), \(vence),,\(media)")
-        writeFile(lista: lista)
-    
-    
-    print("\n\n\tDeseja adicionar outro gasto? [Y/N]\n", terminator:"\n\t")
-    let t = readLine()?.lowercased()
-
-    if t == "y"{
-        dFixa()
     } else {
-        inicio()
+        generic_d(valor: valor, gasto: gasto, tag: tag, data: vence)
     }
-
 }

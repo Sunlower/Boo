@@ -25,7 +25,6 @@ import Foundation
 //FUNCAO DE ESCOLHA
 func poupanca(){
     print("\t\t\tPoupança\n\n\n")
-    let tipo: String = "Despesa"
     let tag: String = "Economia"
     print("\tMeta:", terminator:" ") //Viagem longa, casa, carro
     let gasto = readLine()!
@@ -33,25 +32,11 @@ func poupanca(){
     let valor = Double(readLine()!)
     
     //esse if vai verificar se valor recebeu alguma letra ou valor nulo
-            if gasto == "" {
+    if gasto.isEmpty{
             print("\n\tNenhum campo pode ficar em branco, preencha novamente")
-            poupanca()
-        }
-        media -= Double(valor!)
-    media = round(media * 100) / 100.0
-
-        UserDefaults.standard.set(media, forKey: "media")
-        UserDefaults.standard.synchronize()
-            
-        let lista: String = ("\(gasto.capitalized), \(tipo.capitalized), \(tag.capitalized), -\(valor!), \(formattedDate),,\(media)")
-        writeFile(lista: lista)
-        
-    print("\n\n\tDeseja adicionar outra meta? [Y/N]\n", terminator:"\n\t")
-    let t = readLine()?.lowercased()
-    
-    if t == "y"{
-        poupanca()
+            dOutras()
     } else {
-        inicio()
+        generic_d(valor: valor, gasto: gasto, tag: tag, data: formattedDate)
     }
+    
 }
